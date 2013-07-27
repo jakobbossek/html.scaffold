@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @highlightColor: #649b53;
+@lightGray: #d5d5d5;
 
 /*
  * ============================================
@@ -11,6 +12,17 @@
  * Use SimpleLESS to transform to regular CSS!
  * ============================================
  */
+
+/*
+ * LESS mixins
+ */
+
+.roundedBox {
+	background: @lightGray;
+	border-radius: 5px;
+	border: 1px solid #bbb;
+	padding: 10px 12px;
+}
 
 #logo {
 	color: @highlightColor;
@@ -43,20 +55,23 @@ code {
 	margin: 0;
 }
 
-.hint {
-	background: #d5d5d5;
-	color: #b1a172;
+.inline-code {
+	background: @lightGray;
+	display: inline-block;
+	padding: 1px 3px;
+	border-radius: 3px;
+	color: #6f6f6f;
 	text-shadow: 1px 1px 0px rgba(255,255,255,.7);
-	border-radius: 5px;
-	border: 1px solid #bbb;
-	padding: 10px 12px;
+
+}
+
+.hint {
+	text-shadow: 1px 1px 0px rgba(255,255,255,.7);
+	.roundedBox;
 }
 
 pre {
-	border-radius: 5px;
-	color: #010101;
-	background: #d5d5d5;
-	padding: 12px;
+	.roundedBox;
 }
 
 figure table {
@@ -80,4 +95,9 @@ figcaption {
 	b {
 		font-style: normal;
 	}
+}
+
+.example-block {
+	border-left: 5px solid @lightGray;
+	padding-left: 10px;
 }
