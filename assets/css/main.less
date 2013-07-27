@@ -2,13 +2,13 @@
 
 @highlightColor: #649b53;
 
-
 /*
  * ============================================
- * CSS main file - v0.1
+ * main CSS file - v0.1
  * by Jakob Bossek - http://www.jakobbossek.de/
  *
  * Basic styles for the demo site.
+ * Use SimpleLESS to transform to regular CSS!
  * ============================================
  */
 
@@ -63,8 +63,10 @@ figure table {
 	margin: 0 auto;
 }
 
-table td, table th {
-	padding: 5px 8px;
+table {
+	th, td {
+		padding: 5px 8px;	
+	}
 }
 
 figure {
@@ -75,8 +77,7 @@ figcaption {
 	font-style: italic;
 	font-size: 0.8em;
 	margin-top: 8px;
-}
-
-figcaption b {
-	font-style: normal;
+	b {
+		font-style: normal;
+	}
 }
