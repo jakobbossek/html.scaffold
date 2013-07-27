@@ -1,0 +1,7 @@
+TODO
+====
+
+* think about @viewport directive. Particularly dive deeper in the possibilities
+* adopt further fixes for particular IE versions
+* write some basic stuff regarding HTML forms
+* include import of jQuery lib and some basic plugins?
