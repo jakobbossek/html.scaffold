@@ -128,8 +128,11 @@ th {
 abbr {
   border: 0;
   font-variant: normal;
+}
+
+abbr[title] {
   border-bottom: 1px dotted;
-  /* always indicate helping cursor */
+  /* indicate helping cursor */
   cursor: help;
 }
 
