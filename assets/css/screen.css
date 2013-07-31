@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/*
+ * ============================================
+ * CSS main screen file 
+ * by Jakob Bossek - http://www.jakobbossek.de/
+ *
+ * Place your css styles for differnet devices
+ * here. Use CSS3 media-queries to determine the 
+ * media type.
+ * ============================================
+ */
+
+/* display version on demo page right after the logo */
+#logo:after {
+	display: block;
+	font-style: italic;
+	font-size: 40%;
+	color: #6f6f6f;
+}
+
+/* iPad/tablet */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	#logo:after {
+		content: "(iPad/tablet version)";
+	}
+}
+
+/* iPhone/iPod touch/Android smartphones */
+@media only screen and (max-width: 480px) {
+	#logo:after {
+		content: "(smartphone version)";
+	}
+}
+
+/* Eventually place styles for print version here */
+@media print {
+	/* Currently this is outsourced in assets/css/print.css */
+}
