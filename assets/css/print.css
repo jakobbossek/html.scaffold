@@ -1,3 +1,12 @@
+@charset "utf-8";
+
+/*
+ * ============================================
+ * CSS default print stylesheet  - v1.0
+ * by Jakob Bossek - http://www.jakobbossek.de/
+ * ============================================
+ */
+
 /* set page margin on all sites (supported by Chrome 2.0+, IE 8.0+, Opera 6.0+ and Safari 5.0+) */
 @page {
 	margin: 2cm 1.5cm;
@@ -32,7 +41,6 @@ h4,
 h5,
 h6 {
 	page-break-after: avoid;
-	page-break-inside: avoid;
 }
 
 /* Restrict images to their maximal size but not bigger than the page width */
