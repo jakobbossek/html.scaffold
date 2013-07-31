@@ -13,6 +13,7 @@
 
 /* display version on demo page right after the logo */
 #logo:after {
+	content: "(desktop version)";
 	display: block;
 	font-style: italic;
 	font-size: 40%;
