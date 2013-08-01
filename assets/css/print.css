@@ -26,6 +26,10 @@ body {
 	line-height: 1.3;
 	color: #000;
 	background: #fff;
+	/* disable margins and padding. Margins are handled the @page directive above. */
+	margin: 0 !important;
+	padding: 0 !important;
+	text-align: justify;
 }
 
 /* hide useless parts of the site */
