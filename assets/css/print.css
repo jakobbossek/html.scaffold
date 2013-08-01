@@ -18,6 +18,7 @@
 	color: #000 !important;
 	text-shadow: none !important;
 	box-shadow: none !important;
+	text-align: justify !important;
 }
 
 /* set font to legible serif font */
@@ -29,7 +30,6 @@ body {
 	/* disable margins and padding. Margins are handled the @page directive above. */
 	margin: 0 !important;
 	padding: 0 !important;
-	text-align: justify;
 }
 
 /* hide useless parts of the site */
@@ -44,6 +44,8 @@ h3,
 h4,
 h5,
 h6 {
+	/* set font family to "default" sans-serif web fonts */
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Verdana, serif;
 	page-break-after: avoid;
 }
 
@@ -76,7 +78,8 @@ object {
 p a[href^="http://"]:after,
 p a[href^="https://"]:after {
 	content: " (" attr(href) ")";
-	font-size: 85%;
+	font-size: 90%;
+	font-style: italic;
 	color: #e0e0e0;
 }
 
@@ -87,7 +90,8 @@ p a[href^="javascript"]:after {
 }
 
 a {
-	text-decoration: none !important;
+	font-weight: bold;
+	text-decoration: none;
 }
 
 /* allow overlong links to break and thus not to break the layout */
@@ -96,10 +100,27 @@ a {
 	color: #000;
 }
 
-q:after {
-	content: " (" attr(cite) ")";
-}
-
 abbr[title]:after {
 	content: "(" attr(title) ")";
+}
+
+/* specify type of quotes for quotation environments */ 
+q,
+blockquote {
+	quotes: "\201E" "\201C" "\201A" "\2018"; 
+}
+
+/* append cite content of cite attribute to quotation environment */
+*[cite]:after {
+	content: close-quote"(Source: " attr(cite) ")";
+}
+
+q:before,
+blockquote:before {
+  content: open-quote;
+ }
+
+q:after,
+blockquote:after {
+	content: close-quote;
 }
