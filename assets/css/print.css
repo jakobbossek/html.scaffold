@@ -43,6 +43,16 @@ h6 {
 	page-break-after: avoid;
 }
 
+/* handle widows and orphans 
+ * Currently supported by Chrome 25+, IE 8+, Opera 9.2+ 
+ */
+p {
+	orphans: 3;
+	widows: 3;
+}
+
+
+
 /* Restrict images to their maximal size but not bigger than the page width */
 img {
 	max-width: 100% !important	;
