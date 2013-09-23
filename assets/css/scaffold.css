@@ -95,7 +95,7 @@ var,
 optgroup {
   /* FIXME: do we need this stuff?
   font-style:inherit;
-  font-weight:inherit;
+  font-weight:inherit; */
 }
 
 /* reset default browser styles for del and ins */
@@ -166,18 +166,13 @@ dl {
   position: relative;
 }
 
-
 /*
- * Optimized "micro clearfix" hack (see http://http://nicolasgallagher.com/micro-clearfix-hack/)
+ * Optimized "micro clearfix" hack (see http://nicolasgallagher.com/micro-clearfix-hack/)
  *
  * Addition of :before prevents top margins to collapse in modern browsers
  */
-.clearfix:before,
 .clearfix:after {
-  content: " ";
+  content: "";
   display: table;
-}
-
-.clearfix:after {
   clear: both;
 }
