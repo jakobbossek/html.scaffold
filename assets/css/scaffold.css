@@ -103,7 +103,7 @@ abbr {
  * abbreviations containing a title attribute are not highlighted
  * at all.
  */
-abbr[title] {
+abbr:not([title='']) {
   border-bottom: 1px dotted;
   cursor: help;
 }
