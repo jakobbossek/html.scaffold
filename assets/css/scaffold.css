@@ -266,6 +266,21 @@ dl {
   display: inline;
 }
 
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
 
 /*
  * ============================================
