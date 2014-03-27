@@ -41,6 +41,18 @@ body {
   margin: 0;
 }
 
+/*
+ * Optimize legebility for headlines. Currently only supported by Gecko and Webkit browsers.
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizeLegibility;
+}
+
 pre {
   /* allow words to break between any two letters */
   word-break: break-all;
