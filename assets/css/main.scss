@@ -1,31 +1,15 @@
-@charset "utf-8";
+$highlightColor: #649b53;
+$lightGray: #d5d5d5;
 
-@highlightColor: #649b53;
-@lightGray: #d5d5d5;
-
-/*
- * ============================================
- * main CSS file - v0.1
- * by Jakob Bossek - http://www.jakobbossek.de/
- *
- * Basic styles for the demo site.
- * Use SimpleLESS to transform to regular CSS!
- * ============================================
- */
-
-/*
- * LESS mixins
- */
-
-.roundedBox {
-	background: @lightGray;
+@mixin roundedBox {
+	background: $lightGray;
 	border-radius: 5px;
 	border: 1px solid #bbb;
 	padding: 10px 12px;
 }
 
 #logo {
-	color: @highlightColor;
+	color: $highlightColor;
 	font-size: 300%;
 	font-style: italic;
 }
@@ -39,7 +23,7 @@ body {
 
 a:link,
 a:visited {
-	color: @highlightColor;
+	color: $highlightColor;
 	text-decoration: none;
 	border-bottom: 1px dotted #cfcfcf;
 }
@@ -56,7 +40,7 @@ code {
 }
 
 .inline-code {
-	background: @lightGray;
+	background: $lightGray;
 	display: inline-block;
 	padding: 1px 3px;
 	border-radius: 3px;
@@ -67,11 +51,11 @@ code {
 
 .hint {
 	text-shadow: 1px 1px 0px rgba(255,255,255,.7);
-	.roundedBox;
+	@include roundedBox;
 }
 
 pre {
-	.roundedBox;
+	@include roundedBox;
 }
 
 figure table {
@@ -80,7 +64,7 @@ figure table {
 
 table {
 	th, td {
-		padding: 5px 8px;	
+		padding: 5px 8px;
 	}
 }
 
@@ -98,6 +82,6 @@ figcaption {
 }
 
 .example-block {
-	border-left: 5px solid @lightGray;
+	border-left: 5px solid $lightGray;
 	padding-left: 10px;
 }
