@@ -2,23 +2,15 @@
 
 /*
  * ============================================
- * CSS normalization - v0.1
+ * CSS normalization - v0.2
  * by Jakob Bossek - http://www.jakobbossek.de/
  * ============================================
  */
 
-@viewport {
-  /* browser should scale website to the 100% view */
-  width: device-width;
-  zoom: 1;
-  /* restrict zooming ability to user */
-  minimum-scale: 1;
-  /* enable this if user should not be able to zoom in/out */
-  /* user-zoom: fixed; */
-}
-
 /*
- * FORCE CORRECT BEHAVIOR OF HTML5 ELEMENTS IN OLDER IE BROWSERS
+ * - Internet Explorer up to version 7 does not define display property
+ *   *block* for the new HTML5 elements.
+ * - Moreover the new container *main* is displayed as block in IE11.
  */
 nav,
 header,
@@ -32,20 +24,20 @@ figcaption,
 aside,
 details,
 main {
-  /* force IE 6/7/8/9 to display new html elements as block elements */
   display: block;
 }
 
-/*
- * SET DEFAULT SETTINGS FOR REGULARLY USED ELEMENTS
- */
+/*****************************************************
+ * GENERAL
+ ****************************************************/
 html {
-  /* set default system sans-serif font */
   font-family: sans-serif;
 }
 
+/*
+ * Remove default margin
+ */
 body {
-  /* remove default margin */
   margin: 0;
 }
 
@@ -58,59 +50,29 @@ pre {
   word-wrap: break-word;
 }
 
-table {
-  /* remove spacing between cells */
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-fieldset,
-img {
-  border:0;
-}
-
-a:focus {
-  outline: thin dotted;
-}
-
-a:hover,
-a:active {
-  outline: 0;
-}
-
 figure {
   /* address margin not present in IE 8/9 and Safari 5 */
   margin: 0;
 }
 
-address,
-caption,
-cite,
-code,
-dfn,
-em,
-strong,
-th,
-var,
-optgroup {
-  /* FIXME: do we need this stuff?
-  font-style:inherit;
-  font-weight:inherit;
-}
-
 /* reset default browser styles for del and ins */
 del,
 ins {
-  text-decoration:none;
+  text-decoration: none;
 }
 
 del {
   text-decoration: line-through;
 }
 
+/*
+ * Older versions of Google Chrome and Safari by default have no
+ * style for dfn. Set it explicitly to be consistent with other
+ * browser (families).
+ */
 em,
 dfn {
-  font-style:italic;
+  font-style: italic;
 }
 
 code {
@@ -118,54 +80,103 @@ code {
   font-size: 0.7em;
 }
 
-caption,
-th {
-  text-align: left;
-  vertical-align: top;
-  font-weight: normal;
+img {
+  border: 0;
 }
 
+/*
+ * Some older browsers render the abbreviations in small caps.
+ */
 abbr {
   border: 0;
   font-variant: normal;
 }
 
+/*
+ * Beside Firefox and Opera (testet only in the current versions)
+ * abbreviations containing a title attribute are not highlighted
+ * at all.
+ */
 abbr[title] {
   border-bottom: 1px dotted;
-  /* indicate helping cursor */
-  cursor: help;
 }
 
+/*****************************************************
+ * TABLES
+ ****************************************************/
+
+table {
+  /* remove spacing between cells */
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 0;
+}
+
+caption,
+th {
+  text-align: left;
+  vertical-align: top;
+}
+
+/*****************************************************
+ * LINKS
+ ****************************************************/
+
+/*
+ * IE 10 renders an annoying gray background by default when
+ * links are clicked.
+ */
+a {
+  background: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+/*****************************************************
+ * LINKS
+ ****************************************************/
 input,
 button,
 textarea,
 select,
 optgroup,
 option {
-  font-family:inherit;
-  font-size:inherit;
-  font-style:inherit;
-  font-weight:inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
 }
 
 input,
 button,
 textarea,
 select {
-  font-size:100%;
+  font-size: 100%;
 }
 
-/*
- * FIX BUGS IN IE VERSIONS
- */
+/*****************************************************
+ * ADDRESS BUGS IN OLDER INTERNET EXPLORER
+ ****************************************************/
 
+/*
+ * Solve IE/Win "disappearing list background bug"
+ */
 ul,
 ol,
 dl {
-  /* solve IE/Win "disappearing list background bug" */
   position: relative;
 }
-
 
 /*
  * Optimized "micro clearfix" hack (see http://http://nicolasgallagher.com/micro-clearfix-hack/)
