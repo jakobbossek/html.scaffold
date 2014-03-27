@@ -380,9 +380,10 @@ dl {
   /*
    * We cannot hover over abbreviations to see the title on paper.
    * Therefore append the title after the abbreviations.
+   * Important: only non-empty titles are considered.
    */
-  abbr[title]:after {
-    content: "(" attr(title) ")";
+  abbr:not([title='']):after {
+    content: " (" attr(title) ")";
   }
 
   /*
