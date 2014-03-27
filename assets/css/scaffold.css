@@ -76,6 +76,16 @@ img {
 }
 
 /*
+ * Add the 'responsive' class to make images responsive, i.e., to adapt their size
+ * according to the elements size. The use of max-width instead of width ensures that
+ * the image will not be rendered larger than it actually is.
+ */
+img.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
  * Address margin not present in IE 8/9 and Safari 5
  */
 figure {
