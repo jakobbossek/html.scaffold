@@ -62,12 +62,29 @@ pre {
   word-wrap: break-word;
 }
 
+
+/*****************************************************
+ * FIGURES AND IMAGES
+ ****************************************************/
+
+/*
+ * Internet explorer by default draws a border in the link color
+ * around images. This is ugly as sin!
+ */
+img {
+  border: 0;
+}
+
+/*
+ * Address margin not present in IE 8/9 and Safari 5
+ */
 figure {
-  /* address margin not present in IE 8/9 and Safari 5 */
   margin: 0;
 }
 
-/* reset default browser styles for del and ins */
+/*
+ * reset default browser styles for del and ins
+ */
 del,
 ins {
   text-decoration: none;
@@ -92,12 +109,9 @@ code {
   font-size: 0.7em;
 }
 
-img {
-  border: 0;
-}
-
 /*
  * Some older browsers render the abbreviations in small caps.
+ * We do not want that! We pursuit for consistent visuals in all browsers.
  */
 abbr {
   border: 0;
