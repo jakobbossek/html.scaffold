@@ -187,7 +187,7 @@ a:focus {
 }
 
 /*****************************************************
- * LINKS
+ * FORMS
  ****************************************************/
 input,
 button,
@@ -199,13 +199,19 @@ option {
   font-size: inherit;
   font-style: inherit;
   font-weight: inherit;
+  padding: 0.1em;
 }
 
 input,
 button,
 textarea,
 select {
-  font-size: 100%;
+  font-size: 1em;
+}
+
+label {
+  vertical-align: top;
+  font-weight: bold;
 }
 
 /*****************************************************
