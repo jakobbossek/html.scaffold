@@ -200,3 +200,31 @@ dl {
   display: table;
   clear: both;
 }
+
+
+/*****************************************************
+ * DIFFERENT HELPERS
+ ****************************************************/
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.float-left {
+  float: left;
+  /* fix float bug in IE <= 7 */
+  display: inline;
+}
+
+.float-right {
+  float: right;
+  /* fix float bug in IE <= 7 */
+  display: inline;
+}
