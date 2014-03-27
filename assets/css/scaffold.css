@@ -55,21 +55,6 @@ figure {
   margin: 0;
 }
 
-address,
-caption,
-cite,
-code,
-dfn,
-em,
-strong,
-th,
-var,
-optgroup {
-  /* FIXME: do we need this stuff?
-  font-style:inherit;
-  font-weight:inherit; */
-}
-
 /* reset default browser styles for del and ins */
 del,
 ins {
