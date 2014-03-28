@@ -428,7 +428,7 @@ figcaption b {
   /*
    * override default background and foreground colors.
    */
-  /* line 19, lookandfeel/_print.scss */
+  /* line 19, modules/_print.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -441,7 +441,7 @@ figcaption b {
    * Set font to legible serif font and disable margins and padding
    * (margins are handled the @page directive above).
    */
-  /* line 31, lookandfeel/_print.scss */
+  /* line 31, modules/_print.scss */
   body {
     font: 12pt Georgia, serif;
     line-height: 1.3;
@@ -455,7 +455,7 @@ figcaption b {
   /*
    * Hide elements which are useless on paper.
    */
-  /* line 48, lookandfeel/_print.scss */
+  /* line 48, modules/_print.scss */
   nav,
   video,
   audio,
@@ -467,7 +467,7 @@ figcaption b {
   /*
    * Avoid page breaks after headlines.
    */
-  /* line 60, lookandfeel/_print.scss */
+  /* line 60, modules/_print.scss */
   h1,
   h2,
   h3,
@@ -483,7 +483,7 @@ figcaption b {
    * Handle widows and orphans.
    * (currently supported by Chrome 25+, IE 8+, Opera 9.2+)
    */
-  /* line 70, lookandfeel/_print.scss */
+  /* line 70, modules/_print.scss */
   p {
     orphans: 3;
     widows: 3;
@@ -492,7 +492,7 @@ figcaption b {
   /*
    * Restrict images to their maximal size but not bigger than the page width.
    */
-  /* line 79, lookandfeel/_print.scss */
+  /* line 79, modules/_print.scss */
   img {
     max-width: 100% !important;
     border: 0;
@@ -501,7 +501,7 @@ figcaption b {
   /*
    * Best pratice: show URLs right after the link in braces.
    */
-  /* line 88, lookandfeel/_print.scss */
+  /* line 88, modules/_print.scss */
   p a[href^="http://"]:after,
   p a[href^="https://"]:after {
     content: " (" attr(href) ")";
@@ -515,13 +515,13 @@ figcaption b {
    * FIXME: Think about this! Maybe links inside a text are hidden and therefore
    * the entire sentence does not make any sense anymore.
    */
-  /* line 101, lookandfeel/_print.scss */
+  /* line 101, modules/_print.scss */
   p a[href^="#"]:after,
   p a[href^="javascript"]:after {
     display: none;
   }
 
-  /* line 105, lookandfeel/_print.scss */
+  /* line 105, modules/_print.scss */
   a {
     font-weight: bold;
     text-decoration: none;
@@ -530,7 +530,7 @@ figcaption b {
   /*
    * Allow overlong links to break and thus not to break the layout.
    */
-  /* line 113, lookandfeel/_print.scss */
+  /* line 113, modules/_print.scss */
   a {
     word-wrap: break-word;
     color: #000;
@@ -541,7 +541,7 @@ figcaption b {
    * Therefore append the title after the abbreviations.
    * Important: only non-empty titles are considered.
    */
-  /* line 123, lookandfeel/_print.scss */
+  /* line 123, modules/_print.scss */
   abbr:not([title='']):after {
     content: " (" attr(title) ")";
   }
@@ -549,7 +549,7 @@ figcaption b {
   /*
    * Specify type of quotes for quotation environments.
    */
-  /* line 131, lookandfeel/_print.scss */
+  /* line 131, modules/_print.scss */
   q,
   blockquote {
     quotes: "\201E" "\201C" "\201A" "\2018";
@@ -558,18 +558,18 @@ figcaption b {
   /*
    * Append cite content of cite attribute to quotation environment.
    */
-  /* line 138, lookandfeel/_print.scss */
+  /* line 138, modules/_print.scss */
   *[cite]:after {
     content: close-quote "(Source: " attr(cite) ")";
   }
 
-  /* line 143, lookandfeel/_print.scss */
+  /* line 143, modules/_print.scss */
   q:before,
   blockquote:before {
     content: open-quote;
   }
 
-  /* line 148, lookandfeel/_print.scss */
+  /* line 148, modules/_print.scss */
   q:after,
   blockquote:after {
     content: close-quote;
