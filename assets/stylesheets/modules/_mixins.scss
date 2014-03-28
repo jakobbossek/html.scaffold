@@ -6,24 +6,43 @@
 $vendors-prefixes: "-moz-", "-webkit-", "-ms-", "-o-";
 
 // Helper method.
-// @param $type: CSS property which exists with different vendor prefixes.
-// @param $value: Value of the CSS property.
+// @param $type: 
+//   CSS property which exists with different vendor prefixes.
+// @param $value:
+//   Value of the CSS property.
 @mixin css3property($type, $value) {
   @each $vendor-prefix in $vendors-prefixes {
     #{$vendor-prefix}#{$type}: $value;
   }
 }
 
-// Mixin for browser independent setting of border radius property.
-// @param $radius: Radius of the border. Positive numeric value.
+// Mixin for browser comprehensive setting of border radius property.
+// @param $radius:
+//   Radius of the border. Positive numeric value.
 @mixin border-radius($radius) {
   @include css3property("border-radius", $radius);
 }
 
-// Mixin for browser independent box shadows.
-// @param $shadow: The string as provided to CSS box-shadow style.
+// Mixin for browser comprehensive box shadows.
+// @param $shadow:
+//   The string as provided to CSS box-shadow style.
 @mixin box-shadow($shadow: 0 1px 3px rgba(0,0,0,.5)) {
   @include css3property("box-shadow", $shadow);
+}
+
+// Mixin for browser comprehensive box-sizing.
+// @param $sizing:
+//   Sizing method. Defaults to "initial", i. e., the default value for box-sizing.
+@mixin box-sizing($sizing: initial) {
+  @include css3property("border-box", $sizing);
+}
+
+// Mixin for browser comprehensive CSS3 transitions.
+// @param $transition: 
+//   The transition with property (or properties), duration, timing-function
+//   and delay.
+@mixin transition($transition) {
+  @include css3property("transition", $transition);
 }
 
 @mixin roundedBox {
