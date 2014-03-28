@@ -33,12 +33,18 @@ html {
 /* line 40, modules/_unify.scss */
 body {
   margin: 0;
+  /*
+   * Force vertical scrollbar in Firefox. This circumvents the problem of vertical hopping
+   * when moving from a page with short content to one with a lot of content and a scrollbar.
+   */
+  height: 100%;
+  margin-bottom: 1px;
 }
 
 /*
  * Optimize legebility for headlines. Currently only supported by Gecko and Webkit browsers.
  */
-/* line 53, modules/_unify.scss */
+/* line 59, modules/_unify.scss */
 h1,
 h2,
 h3,
@@ -48,7 +54,7 @@ h6 {
   text-rendering: optimizeLegibility;
 }
 
-/* line 57, modules/_unify.scss */
+/* line 63, modules/_unify.scss */
 pre {
   /* allow words to break between any two letters */
   word-break: break-all;
@@ -61,13 +67,13 @@ pre {
 /*
  * reset default browser styles for del and ins
  */
-/* line 70, modules/_unify.scss */
+/* line 76, modules/_unify.scss */
 del,
 ins {
   text-decoration: none;
 }
 
-/* line 74, modules/_unify.scss */
+/* line 80, modules/_unify.scss */
 del {
   text-decoration: line-through;
 }
@@ -77,13 +83,13 @@ del {
  * style for dfn. Set it explicitly to be consistent with other
  * browser (families).
  */
-/* line 84, modules/_unify.scss */
+/* line 90, modules/_unify.scss */
 em,
 dfn {
   font-style: italic;
 }
 
-/* line 88, modules/_unify.scss */
+/* line 94, modules/_unify.scss */
 code {
   font-family: monospace, sans-serif;
   font-size: 0.7em;
@@ -93,7 +99,7 @@ code {
  * Some older browsers render the abbreviations in small caps.
  * We do not want that! We pursuit for consistent visuals in all browsers.
  */
-/* line 97, modules/_unify.scss */
+/* line 103, modules/_unify.scss */
 abbr {
   border: 0;
   font-variant: normal;
@@ -104,13 +110,13 @@ abbr {
  * abbreviations containing a title attribute are not highlighted
  * at all.
  */
-/* line 107, modules/_unify.scss */
+/* line 113, modules/_unify.scss */
 abbr:not([title='']) {
   border-bottom: 1px dotted;
   cursor: help;
 }
 
-/* line 112, modules/_unify.scss */
+/* line 118, modules/_unify.scss */
 hr {
   margin-bottom: 1.5em;
   height: 0px;
@@ -125,7 +131,7 @@ hr {
  * Internet explorer by default draws a border in the link color
  * around images. This is ugly as sin!
  */
-/* line 127, modules/_unify.scss */
+/* line 133, modules/_unify.scss */
 img {
   border: 0;
 }
@@ -135,7 +141,7 @@ img {
  * according to the elements size. The use of max-width instead of width ensures that
  * the image will not be rendered larger than it actually is.
  */
-/* line 136, modules/_unify.scss */
+/* line 142, modules/_unify.scss */
 img.responsive {
   max-width: 100%;
   height: auto;
@@ -144,7 +150,7 @@ img.responsive {
 /*
  * Address margin not present in IE 8/9 and Safari 5
  */
-/* line 144, modules/_unify.scss */
+/* line 150, modules/_unify.scss */
 figure {
   margin: 0;
 }
@@ -152,20 +158,20 @@ figure {
 /*****************************************************
  * TABLES
  ****************************************************/
-/* line 152, modules/_unify.scss */
+/* line 158, modules/_unify.scss */
 table {
   /* remove spacing between cells */
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 159, modules/_unify.scss */
+/* line 165, modules/_unify.scss */
 th,
 td {
   padding: 0;
 }
 
-/* line 164, modules/_unify.scss */
+/* line 170, modules/_unify.scss */
 caption,
 th {
   text-align: left;
@@ -179,18 +185,18 @@ th {
  * IE 10 renders an annoying gray background by default when
  * links are clicked.
  */
-/* line 177, modules/_unify.scss */
+/* line 183, modules/_unify.scss */
 a {
   background: transparent;
 }
 
-/* line 182, modules/_unify.scss */
+/* line 188, modules/_unify.scss */
 a:active,
 a:hover {
   outline: 0;
 }
 
-/* line 186, modules/_unify.scss */
+/* line 192, modules/_unify.scss */
 a:focus {
   outline: thin dotted;
 }
@@ -198,7 +204,7 @@ a:focus {
 /*****************************************************
  * FORMS
  ****************************************************/
-/* line 198, modules/_unify.scss */
+/* line 204, modules/_unify.scss */
 input,
 button,
 textarea,
@@ -212,7 +218,7 @@ option {
   padding: 0.1em;
 }
 
-/* line 209, modules/_unify.scss */
+/* line 215, modules/_unify.scss */
 input,
 button,
 textarea,
@@ -220,7 +226,7 @@ select {
   font-size: 1em;
 }
 
-/* line 213, modules/_unify.scss */
+/* line 219, modules/_unify.scss */
 label {
   vertical-align: top;
   font-weight: bold;
@@ -232,7 +238,7 @@ label {
 /*
  * Solve IE/Win "disappearing list background bug"
  */
-/* line 227, modules/_unify.scss */
+/* line 233, modules/_unify.scss */
 ul,
 ol,
 dl {
@@ -244,7 +250,7 @@ dl {
  *
  * Addition of :before prevents top margins to collapse in modern browsers
  */
-/* line 236, modules/_unify.scss */
+/* line 242, modules/_unify.scss */
 .clearfix:after {
   content: "";
   display: table;

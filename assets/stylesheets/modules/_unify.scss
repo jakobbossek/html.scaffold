@@ -39,6 +39,12 @@ html {
 
 body {
   margin: 0;
+  /*
+   * Force vertical scrollbar in Firefox. This circumvents the problem of vertical hopping
+   * when moving from a page with short content to one with a lot of content and a scrollbar.
+   */
+  height: 100%;
+  margin-bottom: 1px;
 }
 
 /*
