@@ -17,18 +17,9 @@
 }
 
 // Mixin for browser independent box shadows.
-// @param $h-shadow: The position of the horizontal shadow.
-// @param $v-shadow: The position of the vertical shadow.
-// @param $blur: The blur distance.
-// @param $color: The color of the shadow as HTML color or via rgb/rgba/...
-@mixin box-shadow($h-shadow, $v-shadow, $blur, $color, $inset: false) {
-  @if inset {
-    -webkit-box-shadow: inset $h-shadow $v-shadow $blur $color;
-    -moz-box-shadow: inset $h-shadow $v-shadow $blur $color;
-    box-shadow: inset $h-shadow $v-shadow $blur $color;
-  } @else {
-     -webkit-box-shadow: $h-shadow $v-shadow $blur $color;
-    -moz-box-shadow: $h-shadow $v-shadow $blur $color;
-    box-shadow: $h-shadow $v-shadow $blur $color;
-  }
+// @param $shadow: The string as provided to CSS box-shadow style.
+@mixin box-shadow($shadow: 0 1px 3px rgba(0,0,0,.5)) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
 }
