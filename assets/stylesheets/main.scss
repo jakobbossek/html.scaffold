@@ -1,9 +1,12 @@
-// Unify/normalize
-@import "mixins/unify";
+// Load mixins
+@import "modules/mixins";
 
-// Include all necessary mixins
-@import "mixins/base";
-@import "mixins/util";
+// Unify/normalize
+@import "modules/unify";
+
+// Include all necessary modules
+@import "modules/base";
+@import "modules/util";
 
 // Import page specific stuff
 @import "lookandfeel/base";

@@ -1,9 +1,10 @@
-/*
- * ============================================
- * CSS normalization - v0.2
- * by Jakob Bossek - http://www.jakobbossek.de/
- * ============================================
- */
+// This file tries hard to unify the basic presentation among all browsers.
+// 
+// The styles contained in this file fix inconsistencies in the default presentation
+// of different browsers, fixes some issues in internet explorer and serves as
+// a adequate starting point for developement of amazing styles.
+//
+// Do not manipulate this file by hand! 
 
 /*
  * - Internet Explorer up to version 7 does not define display property

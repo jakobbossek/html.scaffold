@@ -1,0 +1,10 @@
+// Basic page specific styles come here.
+// 
+// Use this file to define all your globally useful mixins, for example,
+// rounded corners or stuff like this.
+@mixin roundedBox {
+  background: #cfcfcf;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  padding: 10px 12px;
+}

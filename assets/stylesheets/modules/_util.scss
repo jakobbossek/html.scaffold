@@ -1,3 +1,6 @@
+// Utility classes.
+// 
+// This file contains several utility classes frequently used in web developement.
 .text-left {
   text-align: left;
 }
@@ -12,14 +15,12 @@
 
 .float-left {
   float: left;
-  /* fix float bug in IE <= 7 */
-  display: inline;
+  display: inline; /* fix float bug in IE <= 7 */
 }
 
 .float-right {
   float: right;
-  /* fix float bug in IE <= 7 */
-  display: inline;
+  display: inline; /* fix float bug in IE <= 7 */
 }
 
 .hidden {

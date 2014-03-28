@@ -1,11 +1,11 @@
-/*
- * ============================================
- * CSS styles for print media.
- *
- * We mainly reset styles which are useless or
- * by Jakob Bossek - http://www.jakobbossek.de/
- * ============================================
- */
+// Print styles.
+//
+// Use this file to specify the look of your page on paper or maybe
+// better write another page specific 'print' file to the lookandfeel
+// folder.
+//
+// This styles are carefully testet and should be a solid groundwork
+// for your own print styles.
 @media print {
 
   /* set page margin on all sites (supported by Chrome 2.0+, IE 8.0+, Opera 6.0+ and Safari 5.0+) */
