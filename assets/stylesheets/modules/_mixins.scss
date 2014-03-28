@@ -8,3 +8,27 @@
   border: 1px solid #bbb;
   padding: 10px 12px;
 }
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Mixin for browser independent box shadows.
+// @param $h-shadow: The position of the horizontal shadow.
+// @param $v-shadow: The position of the vertical shadow.
+// @param $blur: The blur distance.
+// @param $color: The color of the shadow as HTML color or via rgb/rgba/...
+@mixin box-shadow($h-shadow, $v-shadow, $blur, $color, $inset: false) {
+  @if inset {
+    -webkit-box-shadow: inset $h-shadow $v-shadow $blur $color;
+    -moz-box-shadow: inset $h-shadow $v-shadow $blur $color;
+    box-shadow: inset $h-shadow $v-shadow $blur $color;
+  } @else {
+     -webkit-box-shadow: $h-shadow $v-shadow $blur $color;
+    -moz-box-shadow: $h-shadow $v-shadow $blur $color;
+    box-shadow: $h-shadow $v-shadow $blur $color;
+  }
+}
