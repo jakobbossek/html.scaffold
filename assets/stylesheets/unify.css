@@ -1,17 +1,15 @@
-@charset "utf-8";
-
 /*
  * ============================================
  * CSS normalization - v0.2
  * by Jakob Bossek - http://www.jakobbossek.de/
  * ============================================
  */
-
 /*
  * - Internet Explorer up to version 7 does not define display property
  *   *block* for the new HTML5 elements.
  * - Moreover the new container *main* is displayed as block in IE11.
  */
+/* line 24, unify.scss */
 nav,
 header,
 hgroup,
@@ -30,6 +28,7 @@ main {
 /*****************************************************
  * GENERAL
  ****************************************************/
+/* line 31, unify.scss */
 html {
   font-family: sans-serif;
 }
@@ -37,6 +36,7 @@ html {
 /*
  * Remove default margin
  */
+/* line 39, unify.scss */
 body {
   margin: 0;
 }
@@ -44,6 +44,7 @@ body {
 /*
  * Optimize legebility for headlines. Currently only supported by Gecko and Webkit browsers.
  */
+/* line 52, unify.scss */
 h1,
 h2,
 h3,
@@ -53,6 +54,7 @@ h6 {
   text-rendering: optimizeLegibility;
 }
 
+/* line 56, unify.scss */
 pre {
   /* allow words to break between any two letters */
   word-break: break-all;
@@ -65,11 +67,13 @@ pre {
 /*
  * reset default browser styles for del and ins
  */
+/* line 69, unify.scss */
 del,
 ins {
   text-decoration: none;
 }
 
+/* line 73, unify.scss */
 del {
   text-decoration: line-through;
 }
@@ -79,11 +83,13 @@ del {
  * style for dfn. Set it explicitly to be consistent with other
  * browser (families).
  */
+/* line 83, unify.scss */
 em,
 dfn {
   font-style: italic;
 }
 
+/* line 87, unify.scss */
 code {
   font-family: monospace, sans-serif;
   font-size: 0.7em;
@@ -93,6 +99,7 @@ code {
  * Some older browsers render the abbreviations in small caps.
  * We do not want that! We pursuit for consistent visuals in all browsers.
  */
+/* line 96, unify.scss */
 abbr {
   border: 0;
   font-variant: normal;
@@ -103,11 +110,13 @@ abbr {
  * abbreviations containing a title attribute are not highlighted
  * at all.
  */
+/* line 106, unify.scss */
 abbr:not([title='']) {
   border-bottom: 1px dotted;
   cursor: help;
 }
 
+/* line 111, unify.scss */
 hr {
   margin-bottom: 1.5em;
   height: 0px;
@@ -118,11 +127,11 @@ hr {
 /*****************************************************
  * FIGURES AND IMAGES
  ****************************************************/
-
 /*
  * Internet explorer by default draws a border in the link color
  * around images. This is ugly as sin!
  */
+/* line 126, unify.scss */
 img {
   border: 0;
 }
@@ -132,6 +141,7 @@ img {
  * according to the elements size. The use of max-width instead of width ensures that
  * the image will not be rendered larger than it actually is.
  */
+/* line 135, unify.scss */
 img.responsive {
   max-width: 100%;
   height: auto;
@@ -140,6 +150,7 @@ img.responsive {
 /*
  * Address margin not present in IE 8/9 and Safari 5
  */
+/* line 143, unify.scss */
 figure {
   margin: 0;
 }
@@ -147,18 +158,20 @@ figure {
 /*****************************************************
  * TABLES
  ****************************************************/
-
+/* line 151, unify.scss */
 table {
   /* remove spacing between cells */
   border-collapse: collapse;
   border-spacing: 0;
 }
 
+/* line 158, unify.scss */
 th,
 td {
   padding: 0;
 }
 
+/* line 163, unify.scss */
 caption,
 th {
   text-align: left;
@@ -168,20 +181,22 @@ th {
 /*****************************************************
  * LINKS
  ****************************************************/
-
 /*
  * IE 10 renders an annoying gray background by default when
  * links are clicked.
  */
+/* line 176, unify.scss */
 a {
   background: transparent;
 }
 
+/* line 181, unify.scss */
 a:active,
 a:hover {
   outline: 0;
 }
 
+/* line 185, unify.scss */
 a:focus {
   outline: thin dotted;
 }
@@ -189,6 +204,7 @@ a:focus {
 /*****************************************************
  * FORMS
  ****************************************************/
+/* line 197, unify.scss */
 input,
 button,
 textarea,
@@ -202,6 +218,7 @@ option {
   padding: 0.1em;
 }
 
+/* line 208, unify.scss */
 input,
 button,
 textarea,
@@ -209,6 +226,7 @@ select {
   font-size: 1em;
 }
 
+/* line 212, unify.scss */
 label {
   vertical-align: top;
   font-weight: bold;
@@ -217,10 +235,10 @@ label {
 /*****************************************************
  * ADDRESS BUGS IN OLDER INTERNET EXPLORER
  ****************************************************/
-
 /*
  * Solve IE/Win "disappearing list background bug"
  */
+/* line 226, unify.scss */
 ul,
 ol,
 dl {
@@ -232,204 +250,9 @@ dl {
  *
  * Addition of :before prevents top margins to collapse in modern browsers
  */
+/* line 235, unify.scss */
 .clearfix:after {
   content: "";
   display: table;
   clear: both;
-}
-
-
-/*****************************************************
- * DIFFERENT HELPERS
- ****************************************************/
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.float-left {
-  float: left;
-  /* fix float bug in IE <= 7 */
-  display: inline;
-}
-
-.float-right {
-  float: right;
-  /* fix float bug in IE <= 7 */
-  display: inline;
-}
-
-.hidden {
-  display: none;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.fixed {
-  position: fixed;
-}
-
-.absolute {
-  position: absolute;
-}
-
-/*
- * ============================================
- * CSS styles for print media.
- *
- * We mainly reset styles which are useless or
- * by Jakob Bossek - http://www.jakobbossek.de/
- * ============================================
- */
-@media print {
-
-  /* set page margin on all sites (supported by Chrome 2.0+, IE 8.0+, Opera 6.0+ and Safari 5.0+) */
-  @page {
-    margin: 2cm 1.5cm;
-  }
-
-  /*
-   * override default background and foreground colors.
-   */
-  * {
-    background: transparent !important;
-    color: #000 !important;
-    text-shadow: none !important;
-    box-shadow: none !important;
-    text-align: justify !important;
-  }
-
-  /*
-   * Set font to legible serif font and disable margins and padding
-   * (margins are handled the @page directive above).
-   */
-  body {
-    font: 12pt Georgia, serif;
-    line-height: 1.3;
-    color: #000;
-    background: #fff;
-    /*  */
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /*
-   * Hide elements which are useless on paper.
-   */
-  nav,
-  video,
-  audio,
-  embed,
-  object {
-    display: none;
-  }
-
-  /*
-   * Avoid page breaks after headlines.
-   */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    /* set font family to "default" sans-serif web fonts */
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Verdana, serif;
-    page-break-after: avoid;
-  }
-
-  /*
-   * Handle widows and orphans.
-   * (currently supported by Chrome 25+, IE 8+, Opera 9.2+)
-   */
-  p {
-    orphans: 3;
-    widows: 3;
-  }
-
-
-  /*
-   * Restrict images to their maximal size but not bigger than the page width.
-   */
-  img {
-    max-width: 100% !important  ;
-    border: 0;
-  }
-
-  /*
-   * Best pratice: show URLs right after the link in braces.
-   */
-  p a[href^="http://"]:after,
-  p a[href^="https://"]:after {
-    content: " (" attr(href) ")";
-    font-size: 90%;
-    font-style: italic;
-    color: #e0e0e0;
-  }
-
-  /*
-   * hide local anchors.
-   * FIXME: Think about this! Maybe links inside a text are hidden and therefore
-   * the entire sentence does not make any sense anymore.
-   */
-  p a[href^="#"]:after,
-  p a[href^="javascript"]:after {
-    display: none;
-  }
-
-  a {
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  /*
-   * Allow overlong links to break and thus not to break the layout.
-   */
-  a {
-    word-wrap: break-word;
-    color: #000;
-  }
-
-  /*
-   * We cannot hover over abbreviations to see the title on paper.
-   * Therefore append the title after the abbreviations.
-   * Important: only non-empty titles are considered.
-   */
-  abbr:not([title='']):after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Specify type of quotes for quotation environments.
-   */
-  q,
-  blockquote {
-    quotes: "\201E" "\201C" "\201A" "\2018";
-  }
-
-  /*
-   * Append cite content of cite attribute to quotation environment.
-   */
-  *[cite]:after {
-    content: close-quote"(Source: " attr(cite) ")";
-  }
-
-  q:before,
-  blockquote:before {
-    content: open-quote;
-   }
-
-  q:after,
-  blockquote:after {
-    content: close-quote;
-  }
 }

@@ -1,0 +1,87 @@
+$highlightColor: #649b53;
+$lightGray: #d5d5d5;
+
+@mixin roundedBox {
+  background: $lightGray;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  padding: 10px 12px;
+}
+
+#logo {
+  color: $highlightColor;
+  font-size: 300%;
+  font-style: italic;
+}
+
+body {
+  margin: 0 auto;
+  margin-top: 10px;
+  max-width: 600px;
+  padding: 12px;
+}
+
+a:link,
+a:visited {
+  color: $highlightColor;
+  text-decoration: none;
+  border-bottom: 1px dotted #cfcfcf;
+}
+
+a:active,
+a:focus,
+a:hover {
+  border-bottom: 0;
+  color: #4f7f41;
+}
+
+code {
+  margin: 0;
+}
+
+.inline-code {
+  background: $lightGray;
+  display: inline-block;
+  padding: 1px 3px;
+  border-radius: 3px;
+  color: #6f6f6f;
+  text-shadow: 1px 1px 0px rgba(255,255,255,.7);
+
+}
+
+.hint {
+  text-shadow: 1px 1px 0px rgba(255,255,255,.7);
+  @include roundedBox;
+}
+
+pre {
+  @include roundedBox;
+}
+
+figure table {
+  margin: 0 auto;
+}
+
+table {
+  th, td {
+    padding: 5px 8px;
+  }
+}
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.8em;
+  margin-top: 8px;
+  b {
+    font-style: normal;
+  }
+}
+
+.example-block {
+  border-left: 5px solid $lightGray;
+  padding-left: 10px;
+}

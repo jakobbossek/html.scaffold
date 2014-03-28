@@ -1,0 +1,151 @@
+/*
+ * ============================================
+ * CSS styles for print media.
+ *
+ * We mainly reset styles which are useless or
+ * by Jakob Bossek - http://www.jakobbossek.de/
+ * ============================================
+ */
+@media print {
+
+  /* set page margin on all sites (supported by Chrome 2.0+, IE 8.0+, Opera 6.0+ and Safari 5.0+) */
+  @page {
+    margin: 2cm 1.5cm;
+  }
+
+  /*
+   * override default background and foreground colors.
+   */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    text-align: justify !important;
+  }
+
+  /*
+   * Set font to legible serif font and disable margins and padding
+   * (margins are handled the @page directive above).
+   */
+  body {
+    font: 12pt Georgia, serif;
+    line-height: 1.3;
+    color: #000;
+    background: #fff;
+    /*  */
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /*
+   * Hide elements which are useless on paper.
+   */
+  nav,
+  video,
+  audio,
+  embed,
+  object {
+    display: none;
+  }
+
+  /*
+   * Avoid page breaks after headlines.
+   */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    /* set font family to "default" sans-serif web fonts */
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Verdana, serif;
+    page-break-after: avoid;
+  }
+
+  /*
+   * Handle widows and orphans.
+   * (currently supported by Chrome 25+, IE 8+, Opera 9.2+)
+   */
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+
+  /*
+   * Restrict images to their maximal size but not bigger than the page width.
+   */
+  img {
+    max-width: 100% !important  ;
+    border: 0;
+  }
+
+  /*
+   * Best pratice: show URLs right after the link in braces.
+   */
+  p a[href^="http://"]:after,
+  p a[href^="https://"]:after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    font-style: italic;
+    color: #e0e0e0;
+  }
+
+  /*
+   * hide local anchors.
+   * FIXME: Think about this! Maybe links inside a text are hidden and therefore
+   * the entire sentence does not make any sense anymore.
+   */
+  p a[href^="#"]:after,
+  p a[href^="javascript"]:after {
+    display: none;
+  }
+
+  a {
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  /*
+   * Allow overlong links to break and thus not to break the layout.
+   */
+  a {
+    word-wrap: break-word;
+    color: #000;
+  }
+
+  /*
+   * We cannot hover over abbreviations to see the title on paper.
+   * Therefore append the title after the abbreviations.
+   * Important: only non-empty titles are considered.
+   */
+  abbr:not([title='']):after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Specify type of quotes for quotation environments.
+   */
+  q,
+  blockquote {
+    quotes: "\201E" "\201C" "\201A" "\2018";
+  }
+
+  /*
+   * Append cite content of cite attribute to quotation environment.
+   */
+  *[cite]:after {
+    content: close-quote"(Source: " attr(cite) ")";
+  }
+
+  q:before,
+  blockquote:before {
+    content: open-quote;
+   }
+
+  q:after,
+  blockquote:after {
+    content: close-quote;
+  }
+}

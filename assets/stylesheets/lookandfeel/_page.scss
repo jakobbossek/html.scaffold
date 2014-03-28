@@ -1,5 +1,3 @@
-@charset "utf-8";
-
 /*
  * ============================================
  * CSS main screen file 
@@ -13,28 +11,23 @@
 
 /* display version on demo page right after the logo */
 #logo:after {
-	content: "(desktop version)";
-	display: block;
-	font-style: italic;
-	font-size: 40%;
-	color: #6f6f6f;
+  content: "(desktop version)";
+  display: block;
+  font-style: italic;
+  font-size: 40%;
+  color: #6f6f6f;
 }
 
-/* iPad/tablet */
+/* breakpoint for tablets */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-	#logo:after {
-		content: "(iPad/tablet version)";
-	}
+  #logo:after {
+    content: "(iPad/tablet version)";
+  }
 }
 
-/* iPhone/iPod touch/Android smartphones */
+/* breakpoint for smartphones */
 @media only screen and (max-width: 480px) {
-	#logo:after {
-		content: "(smartphone version)";
-	}
-}
-
-/* Eventually place styles for print version here */
-@media print {
-	/* Currently this is outsourced in assets/css/print.css */
+  #logo:after {
+    content: "(smartphone version)";
+  }
 }

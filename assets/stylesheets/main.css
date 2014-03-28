@@ -1,0 +1,601 @@
+/*
+ * ============================================
+ * CSS normalization - v0.2
+ * by Jakob Bossek - http://www.jakobbossek.de/
+ * ============================================
+ */
+/*
+ * - Internet Explorer up to version 7 does not define display property
+ *   *block* for the new HTML5 elements.
+ * - Moreover the new container *main* is displayed as block in IE11.
+ */
+/* line 24, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+nav,
+header,
+hgroup,
+footer,
+article,
+section,
+summary,
+figure,
+figcaption,
+aside,
+details,
+main {
+  display: block;
+}
+
+/*****************************************************
+ * GENERAL
+ ****************************************************/
+/* line 31, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+html {
+  font-family: sans-serif;
+}
+
+/*
+ * Remove default margin
+ */
+/* line 39, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+body {
+  margin: 0;
+}
+
+/*
+ * Optimize legebility for headlines. Currently only supported by Gecko and Webkit browsers.
+ */
+/* line 52, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizeLegibility;
+}
+
+/* line 56, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+pre {
+  /* allow words to break between any two letters */
+  word-break: break-all;
+  /* make it wrap in all browsers */
+  white-space: pre-wrap;
+  /* allow long words to be able to break */
+  word-wrap: break-word;
+}
+
+/*
+ * reset default browser styles for del and ins
+ */
+/* line 69, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+del,
+ins {
+  text-decoration: none;
+}
+
+/* line 73, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+del {
+  text-decoration: line-through;
+}
+
+/*
+ * Older versions of Google Chrome and Safari by default have no
+ * style for dfn. Set it explicitly to be consistent with other
+ * browser (families).
+ */
+/* line 83, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+em,
+dfn {
+  font-style: italic;
+}
+
+/* line 87, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+code {
+  font-family: monospace, sans-serif;
+  font-size: 0.7em;
+}
+
+/*
+ * Some older browsers render the abbreviations in small caps.
+ * We do not want that! We pursuit for consistent visuals in all browsers.
+ */
+/* line 96, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+abbr {
+  border: 0;
+  font-variant: normal;
+}
+
+/*
+ * Beside Firefox and Opera (testet only in the current versions)
+ * abbreviations containing a title attribute are not highlighted
+ * at all.
+ */
+/* line 106, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+abbr:not([title='']) {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 111, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+hr {
+  margin-bottom: 1.5em;
+  height: 0px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+/*****************************************************
+ * FIGURES AND IMAGES
+ ****************************************************/
+/*
+ * Internet explorer by default draws a border in the link color
+ * around images. This is ugly as sin!
+ */
+/* line 126, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+img {
+  border: 0;
+}
+
+/*
+ * Add the 'responsive' class to make images responsive, i.e., to adapt their size
+ * according to the elements size. The use of max-width instead of width ensures that
+ * the image will not be rendered larger than it actually is.
+ */
+/* line 135, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+img.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+ * Address margin not present in IE 8/9 and Safari 5
+ */
+/* line 143, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+figure {
+  margin: 0;
+}
+
+/*****************************************************
+ * TABLES
+ ****************************************************/
+/* line 151, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+table {
+  /* remove spacing between cells */
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 158, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+th,
+td {
+  padding: 0;
+}
+
+/* line 163, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+caption,
+th {
+  text-align: left;
+  vertical-align: top;
+}
+
+/*****************************************************
+ * LINKS
+ ****************************************************/
+/*
+ * IE 10 renders an annoying gray background by default when
+ * links are clicked.
+ */
+/* line 176, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+a {
+  background: transparent;
+}
+
+/* line 181, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 185, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/*****************************************************
+ * FORMS
+ ****************************************************/
+/* line 197, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  padding: 0.1em;
+}
+
+/* line 208, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+input,
+button,
+textarea,
+select {
+  font-size: 1em;
+}
+
+/* line 212, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+label {
+  vertical-align: top;
+  font-weight: bold;
+}
+
+/*****************************************************
+ * ADDRESS BUGS IN OLDER INTERNET EXPLORER
+ ****************************************************/
+/*
+ * Solve IE/Win "disappearing list background bug"
+ */
+/* line 226, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+ul,
+ol,
+dl {
+  position: relative;
+}
+
+/*
+ * Optimized "micro clearfix" hack (see http://nicolasgallagher.com/micro-clearfix-hack/)
+ *
+ * Addition of :before prevents top margins to collapse in modern browsers
+ */
+/* line 235, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_unify.scss */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 1, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_util.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 5, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_util.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 9, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_util.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 13, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_util.scss */
+.float-left {
+  float: left;
+  /* fix float bug in IE <= 7 */
+  display: inline;
+}
+
+/* line 19, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_util.scss */
+.float-right {
+  float: right;
+  /* fix float bug in IE <= 7 */
+  display: inline;
+}
+
+/* line 25, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_util.scss */
+.hidden {
+  display: none;
+}
+
+/* line 29, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_util.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 33, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_util.scss */
+.fixed {
+  position: fixed;
+}
+
+/* line 37, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/mixins/_util.scss */
+.absolute {
+  position: absolute;
+}
+
+/* line 11, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_base.scss */
+#logo {
+  color: #649b53;
+  font-size: 300%;
+  font-style: italic;
+}
+
+/* line 17, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_base.scss */
+body {
+  margin: 0 auto;
+  margin-top: 10px;
+  max-width: 600px;
+  padding: 12px;
+}
+
+/* line 25, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_base.scss */
+a:link,
+a:visited {
+  color: #649b53;
+  text-decoration: none;
+  border-bottom: 1px dotted #cfcfcf;
+}
+
+/* line 33, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_base.scss */
+a:active,
+a:focus,
+a:hover {
+  border-bottom: 0;
+  color: #4f7f41;
+}
+
+/* line 38, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_base.scss */
+code {
+  margin: 0;
+}
+
+/* line 42, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_base.scss */
+.inline-code {
+  background: #d5d5d5;
+  display: inline-block;
+  padding: 1px 3px;
+  border-radius: 3px;
+  color: #6f6f6f;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0);
+}
+
+/* line 52, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_base.scss */
+.hint {
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0);
+  background: #d5d5d5;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  padding: 10px 12px;
+}
+
+/* line 57, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_base.scss */
+pre {
+  background: #d5d5d5;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  padding: 10px 12px;
+}
+
+/* line 61, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_base.scss */
+figure table {
+  margin: 0 auto;
+}
+
+/* line 66, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_base.scss */
+table th, table td {
+  padding: 5px 8px;
+}
+
+/* line 71, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_base.scss */
+figure {
+  text-align: center;
+}
+
+/* line 75, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_base.scss */
+figcaption {
+  font-style: italic;
+  font-size: 0.8em;
+  margin-top: 8px;
+}
+/* line 79, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_base.scss */
+figcaption b {
+  font-style: normal;
+}
+
+/* line 84, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_base.scss */
+.example-block {
+  border-left: 5px solid #d5d5d5;
+  padding-left: 10px;
+}
+
+/*
+ * ============================================
+ * CSS main screen file 
+ * by Jakob Bossek - http://www.jakobbossek.de/
+ *
+ * Place your css styles for differnet devices
+ * here. Use CSS3 media-queries to determine the 
+ * media type.
+ * ============================================
+ */
+/* display version on demo page right after the logo */
+/* line 13, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_page.scss */
+#logo:after {
+  content: "(desktop version)";
+  display: block;
+  font-style: italic;
+  font-size: 40%;
+  color: #6f6f6f;
+}
+
+/* breakpoint for tablets */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* line 23, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_page.scss */
+  #logo:after {
+    content: "(iPad/tablet version)";
+  }
+}
+/* breakpoint for smartphones */
+@media only screen and (max-width: 480px) {
+  /* line 30, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_page.scss */
+  #logo:after {
+    content: "(smartphone version)";
+  }
+}
+/*
+ * ============================================
+ * CSS styles for print media.
+ *
+ * We mainly reset styles which are useless or
+ * by Jakob Bossek - http://www.jakobbossek.de/
+ * ============================================
+ */
+@media print {
+  /* set page margin on all sites (supported by Chrome 2.0+, IE 8.0+, Opera 6.0+ and Safari 5.0+) */
+  @page {
+    margin: 2cm 1.5cm;
+}
+
+  /*
+   * override default background and foreground colors.
+   */
+  /* line 19, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_print.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    text-align: justify !important;
+  }
+
+  /*
+   * Set font to legible serif font and disable margins and padding
+   * (margins are handled the @page directive above).
+   */
+  /* line 31, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_print.scss */
+  body {
+    font: 12pt Georgia, serif;
+    line-height: 1.3;
+    color: #000;
+    background: #fff;
+    /*  */
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /*
+   * Hide elements which are useless on paper.
+   */
+  /* line 48, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_print.scss */
+  nav,
+  video,
+  audio,
+  embed,
+  object {
+    display: none;
+  }
+
+  /*
+   * Avoid page breaks after headlines.
+   */
+  /* line 60, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_print.scss */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    /* set font family to "default" sans-serif web fonts */
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Verdana, serif;
+    page-break-after: avoid;
+  }
+
+  /*
+   * Handle widows and orphans.
+   * (currently supported by Chrome 25+, IE 8+, Opera 9.2+)
+   */
+  /* line 70, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_print.scss */
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /*
+   * Restrict images to their maximal size but not bigger than the page width.
+   */
+  /* line 79, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_print.scss */
+  img {
+    max-width: 100% !important;
+    border: 0;
+  }
+
+  /*
+   * Best pratice: show URLs right after the link in braces.
+   */
+  /* line 88, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_print.scss */
+  p a[href^="http://"]:after,
+  p a[href^="https://"]:after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    font-style: italic;
+    color: #e0e0e0;
+  }
+
+  /*
+   * hide local anchors.
+   * FIXME: Think about this! Maybe links inside a text are hidden and therefore
+   * the entire sentence does not make any sense anymore.
+   */
+  /* line 101, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_print.scss */
+  p a[href^="#"]:after,
+  p a[href^="javascript"]:after {
+    display: none;
+  }
+
+  /* line 105, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_print.scss */
+  a {
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  /*
+   * Allow overlong links to break and thus not to break the layout.
+   */
+  /* line 113, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_print.scss */
+  a {
+    word-wrap: break-word;
+    color: #000;
+  }
+
+  /*
+   * We cannot hover over abbreviations to see the title on paper.
+   * Therefore append the title after the abbreviations.
+   * Important: only non-empty titles are considered.
+   */
+  /* line 123, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_print.scss */
+  abbr:not([title='']):after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Specify type of quotes for quotation environments.
+   */
+  /* line 131, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_print.scss */
+  q,
+  blockquote {
+    quotes: "\201E" "\201C" "\201A" "\2018";
+  }
+
+  /*
+   * Append cite content of cite attribute to quotation environment.
+   */
+  /* line 138, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_print.scss */
+  *[cite]:after {
+    content: close-quote "(Source: " attr(cite) ")";
+  }
+
+  /* line 143, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_print.scss */
+  q:before,
+  blockquote:before {
+    content: open-quote;
+  }
+
+  /* line 148, /Users/jboss/Sites/scaffolding/html.scaffold/assets/stylesheets/lookandfeel/_print.scss */
+  q:after,
+  blockquote:after {
+    content: close-quote;
+  }
+}
