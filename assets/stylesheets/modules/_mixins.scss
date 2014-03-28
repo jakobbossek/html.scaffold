@@ -2,24 +2,33 @@
 // 
 // Use this file to define all your globally useful mixins, for example,
 // rounded corners or stuff like this.
-@mixin roundedBox {
-  background: #cfcfcf;
-  border-radius: 5px;
-  border: 1px solid #bbb;
-  padding: 10px 12px;
+
+$vendors-prefixes: "-moz-", "-webkit-", "-ms-", "-o-";
+
+// Helper method.
+// @param $type: CSS property which exists with different vendor prefixes.
+// @param $value: Value of the CSS property.
+@mixin css3property($type, $value) {
+  @each $vendor-prefix in $vendors-prefixes {
+    #{$vendor-prefix}#{$type}: $value;
+  }
 }
 
+// Mixin for browser independent setting of border radius property.
+// @param $radius: Radius of the border. Positive numeric value.
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
+  @include css3property("border-radius", $radius);
 }
 
 // Mixin for browser independent box shadows.
 // @param $shadow: The string as provided to CSS box-shadow style.
 @mixin box-shadow($shadow: 0 1px 3px rgba(0,0,0,.5)) {
-  -webkit-box-shadow: $shadow;
-  -moz-box-shadow: $shadow;
-  box-shadow: $shadow;
+  @include css3property("box-shadow", $shadow);
+}
+
+@mixin roundedBox {
+  background: #cfcfcf;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  padding: 10px 12px;
 }
