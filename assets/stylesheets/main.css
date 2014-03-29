@@ -306,31 +306,50 @@ dl {
   position: absolute;
 }
 
-/* line 4, lookandfeel/_page.scss */
+/* line 6, lookandfeel/_page.scss */
 body {
   margin: 0 auto;
-  margin-top: 10px;
-  max-width: 600px;
-  padding: 12px;
+  max-width: 1240px;
+  padding: 10px;
 }
 
-/* line 11, lookandfeel/_page.scss */
-code {
-  margin: 0;
+/* line 12, lookandfeel/_page.scss */
+#welcome {
+  font-size: 3em;
+  color: #82a47e;
+}
+
+/* line 17, lookandfeel/_page.scss */
+#active-media-query:after {
+  content: " (smartphones)";
 }
 
 /* breakpoint for tablets */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 18, lookandfeel/_page.scss */
-  #logo:after {
-    content: "(iPad/tablet version)";
+@media only screen and (min-width: 480px) {
+  /* line 23, lookandfeel/_page.scss */
+  #active-media-query:after {
+    content: " (tablets)";
   }
 }
-/* breakpoint for smartphones */
-@media only screen and (max-width: 480px) {
-  /* line 25, lookandfeel/_page.scss */
-  #logo:after {
-    content: "(smartphone version)";
+/* breakpoint for small displays */
+@media only screen and (min-width: 720px) {
+  /* line 30, lookandfeel/_page.scss */
+  #active-media-query:after {
+    content: " (normal)";
+  }
+}
+/* breakpoint for small displays */
+@media only screen and (min-width: 960px) {
+  /* line 37, lookandfeel/_page.scss */
+  #active-media-query:after {
+    content: " (large)";
+  }
+}
+/* breakpoint for small displays */
+@media only screen and (min-width: 1240px) {
+  /* line 44, lookandfeel/_page.scss */
+  #active-media-query:after {
+    content: " (even larger)";
   }
 }
 @media print {

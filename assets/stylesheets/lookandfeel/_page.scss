@@ -1,28 +1,47 @@
 // Main page styles come here.
 // 
 // Use this file to define the behaviour of your page elements.
+// If this is the first time you opened this file you will see some styles for
+// the demo page. We purchase a mobile first approach here.
 body {
   margin: 0 auto;
-  margin-top: 10px;
-  max-width: 600px;
-  padding: 12px;
+  max-width: 1240px;
+  padding: 10px;
 }
 
-code {
-  margin: 0;
+#welcome {
+  font-size: 3em;
+  color: #82a47e;
 }
 
+#active-media-query:after {
+  content: " (smartphones)";
+}
 
 /* breakpoint for tablets */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  #logo:after {
-    content: "(iPad/tablet version)";
+@media only screen and (min-width: 480px) {
+  #active-media-query:after {
+    content: " (tablets)";
   }
 }
 
-/* breakpoint for smartphones */
-@media only screen and (max-width: 480px) {
-  #logo:after {
-    content: "(smartphone version)";
+/* breakpoint for small displays */
+@media only screen and (min-width: 720px) {
+  #active-media-query:after {
+    content: " (normal)";
+  }
+}
+
+/* breakpoint for small displays */
+@media only screen and (min-width: 960px) {
+  #active-media-query:after {
+    content: " (large)";
+  }
+}
+
+/* breakpoint for small displays */
+@media only screen and (min-width: 1240px) {
+  #active-media-query:after {
+    content: " (even larger)";
   }
 }
