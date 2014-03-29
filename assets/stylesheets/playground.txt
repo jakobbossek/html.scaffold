@@ -1,0 +1,14 @@
+
+#test {
+  @include border-radius(10px);
+  @include box-shadow(2px 2px 3px rgba(0,0,0,0.7));
+  display: block;
+  width: 200px;
+  text-align: center;
+  padding: 20px;
+}
+
+#test:hover {
+  @include transition(all 2s ease);
+  width: 400px;
+}

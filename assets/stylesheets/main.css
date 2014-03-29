@@ -307,23 +307,6 @@ dl {
 }
 
 /* line 4, lookandfeel/_page.scss */
-#logo {
-  color: #649b53;
-  font-size: 300%;
-  font-style: italic;
-}
-
-/* display version on demo page right after the logo */
-/* line 11, lookandfeel/_page.scss */
-#logo:after {
-  content: "(desktop version)";
-  display: block;
-  font-style: italic;
-  font-size: 40%;
-  color: #6f6f6f;
-}
-
-/* line 19, lookandfeel/_page.scss */
 body {
   margin: 0 auto;
   margin-top: 10px;
@@ -331,96 +314,21 @@ body {
   padding: 12px;
 }
 
-/* line 27, lookandfeel/_page.scss */
-a:link,
-a:visited {
-  color: #649b53;
-  text-decoration: none;
-  border-bottom: 1px dotted #cfcfcf;
-}
-
-/* line 35, lookandfeel/_page.scss */
-a:active,
-a:focus,
-a:hover {
-  border-bottom: 0;
-  color: #4f7f41;
-}
-
-/* line 40, lookandfeel/_page.scss */
+/* line 11, lookandfeel/_page.scss */
 code {
   margin: 0;
 }
 
-/* line 44, lookandfeel/_page.scss */
-.inline-code {
-  background: #cfcfcf;
-  display: inline-block;
-  padding: 1px 3px;
-  border-radius: 3px;
-  color: #6f6f6f;
-  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0);
-}
-
-/* line 54, lookandfeel/_page.scss */
-.hint {
-  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0);
-  background: #cfcfcf;
-  border-radius: 5px;
-  border: 1px solid #bbb;
-  padding: 10px 12px;
-}
-
-/* line 59, lookandfeel/_page.scss */
-pre {
-  background: #cfcfcf;
-  border-radius: 5px;
-  border: 1px solid #bbb;
-  padding: 10px 12px;
-}
-
-/* line 63, lookandfeel/_page.scss */
-figure table {
-  margin: 0 auto;
-}
-
-/* line 68, lookandfeel/_page.scss */
-table th, table td {
-  padding: 5px 8px;
-}
-
-/* line 73, lookandfeel/_page.scss */
-figure {
-  text-align: center;
-}
-
-/* line 77, lookandfeel/_page.scss */
-figcaption {
-  font-style: italic;
-  font-size: 0.8em;
-  margin-top: 8px;
-}
-/* line 81, lookandfeel/_page.scss */
-figcaption b {
-  font-style: normal;
-}
-
-/* line 86, lookandfeel/_page.scss */
-.example-block {
-  border-left: 5px solid #cfcfcf;
-  padding-left: 10px;
-}
-
 /* breakpoint for tablets */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 93, lookandfeel/_page.scss */
+  /* line 18, lookandfeel/_page.scss */
   #logo:after {
     content: "(iPad/tablet version)";
   }
 }
 /* breakpoint for smartphones */
 @media only screen and (max-width: 480px) {
-  /* line 100, lookandfeel/_page.scss */
+  /* line 25, lookandfeel/_page.scss */
   #logo:after {
     content: "(smartphone version)";
   }

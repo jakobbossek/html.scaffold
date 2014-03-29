@@ -44,10 +44,3 @@ $vendors-prefixes: "-moz-", "-webkit-", "-ms-", "-o-";
 @mixin transition($transition) {
   @include css3property("transition", $transition);
 }
-
-@mixin roundedBox {
-  background: #cfcfcf;
-  border-radius: 5px;
-  border: 1px solid #bbb;
-  padding: 10px 12px;
-}
