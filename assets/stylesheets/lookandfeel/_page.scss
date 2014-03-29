@@ -14,6 +14,18 @@ body {
   color: #82a47e;
 }
 
+#active-media-query {
+  position: fixed;
+  width: 100%;
+  padding: 0.3em 10px;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  background: #000;
+}
+
 #active-media-query:after {
   content: " (smartphones)";
 }

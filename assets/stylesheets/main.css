@@ -320,34 +320,47 @@ body {
 }
 
 /* line 17, lookandfeel/_page.scss */
+#active-media-query {
+  position: fixed;
+  width: 100%;
+  padding: 0.3em 10px;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  background: #000;
+}
+
+/* line 29, lookandfeel/_page.scss */
 #active-media-query:after {
   content: " (smartphones)";
 }
 
 /* breakpoint for tablets */
 @media only screen and (min-width: 480px) {
-  /* line 23, lookandfeel/_page.scss */
+  /* line 35, lookandfeel/_page.scss */
   #active-media-query:after {
     content: " (tablets)";
   }
 }
 /* breakpoint for small displays */
 @media only screen and (min-width: 720px) {
-  /* line 30, lookandfeel/_page.scss */
+  /* line 42, lookandfeel/_page.scss */
   #active-media-query:after {
     content: " (normal)";
   }
 }
 /* breakpoint for small displays */
 @media only screen and (min-width: 960px) {
-  /* line 37, lookandfeel/_page.scss */
+  /* line 49, lookandfeel/_page.scss */
   #active-media-query:after {
     content: " (large)";
   }
 }
 /* breakpoint for small displays */
 @media only screen and (min-width: 1240px) {
-  /* line 44, lookandfeel/_page.scss */
+  /* line 56, lookandfeel/_page.scss */
   #active-media-query:after {
     content: " (even larger)";
   }
